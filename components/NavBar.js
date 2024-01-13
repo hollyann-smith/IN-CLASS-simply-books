@@ -24,6 +24,15 @@ export default function NavBar() {
             <Link passHref href="/book/new">
               <Nav.Link>Create Book</Nav.Link>
             </Link>
+            <Link passHref href="/pages/author/[firebaseKey].js">
+              <Nav.Link>Authors</Nav.Link>
+            </Link>
+            <Link passHref href="/pages/author/edit/[firebaseKey].js">
+              <Nav.Link>Create Author</Nav.Link>
+            </Link>
+            <Link passHref href="/pages/profile.js">
+              <Nav.Link>Profile</Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
