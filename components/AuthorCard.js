@@ -14,6 +14,7 @@ function AuthorCard({ authorObj, onUpdate }) {
 
   return (
     <Card style={{ width: '18rem', margin: '10px' }}>
+      <Card.Img variant="top" src={authorObj.image} alt={authorObj.last_name} style={{ height: '400px' }} />
       <Card.Body>
         <Card.Title>{authorObj.last_name}</Card.Title>
         {/* DYNAMIC LINK TO VIEW THE BOOK DETAILS  */}
@@ -35,6 +36,7 @@ function AuthorCard({ authorObj, onUpdate }) {
 AuthorCard.propTypes = {
   authorObj: PropTypes.shape({
     last_name: PropTypes.string,
+    image: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,

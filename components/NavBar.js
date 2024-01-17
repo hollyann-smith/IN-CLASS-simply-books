@@ -7,7 +7,9 @@ import {
   Navbar, Container, Nav,
 } from 'react-bootstrap';
 
-export default function NavBar() {
+export default function NavBar({ user }) {
+  // const user = useAuth();
+  // console.warn('photo', user);
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -31,7 +33,17 @@ export default function NavBar() {
               <Nav.Link>Create Author</Nav.Link>
             </Link>
             <Link passHref href="/profile">
-              <Nav.Link>Profile</Nav.Link>
+              <Nav.Link>
+                <img
+                  src={user.photoURL}
+                  style={{
+                    width: '40px',
+                    height: '40px',
+                    borderRadius: '50%',
+                  }}
+                  alt="profile avatar"
+                />
+              </Nav.Link>
             </Link>
           </Nav>
         </Navbar.Collapse>
